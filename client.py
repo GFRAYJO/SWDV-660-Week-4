@@ -6,7 +6,7 @@ PORT = 9500
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as c:
     c.connect((HOST, PORT))
 
-    msg = input("").encode()
+    msg = input("Type a word: ").encode()
     c.send(msg)
 
     serv = c.recv(1024).decode()
